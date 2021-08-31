@@ -15,6 +15,7 @@ Method | HTTP request | Description
 [**GetAPITest**](SyntheticsApi.md#GetAPITest) | **Get** /api/v1/synthetics/tests/api/{public_id} | Get an API test
 [**GetAPITestLatestResults**](SyntheticsApi.md#GetAPITestLatestResults) | **Get** /api/v1/synthetics/tests/{public_id}/results | Get an API test&#39;s latest results summaries
 [**GetAPITestResult**](SyntheticsApi.md#GetAPITestResult) | **Get** /api/v1/synthetics/tests/{public_id}/results/{result_id} | Get an API test result
+[**GetBatch**](SyntheticsApi.md#GetBatch) | **Get** /api/v1/synthetics/ci/batch/{batch_id} | Get details of batch
 [**GetBrowserTest**](SyntheticsApi.md#GetBrowserTest) | **Get** /api/v1/synthetics/tests/browser/{public_id} | Get a browser test
 [**GetBrowserTestLatestResults**](SyntheticsApi.md#GetBrowserTestLatestResults) | **Get** /api/v1/synthetics/tests/browser/{public_id}/results | Get a browser test&#39;s latest results summaries
 [**GetBrowserTestResult**](SyntheticsApi.md#GetBrowserTestResult) | **Get** /api/v1/synthetics/tests/browser/{public_id}/results/{result_id} | Get a browser test result
@@ -799,6 +800,76 @@ This endpoint does not have optional parameters.
 ### Return type
 
 [**SyntheticsAPITestResultFull**](SyntheticsAPITestResultFull.md)
+
+### Authorization
+
+[apiKeyAuth](../README.md#apiKeyAuth), [appKeyAuth](../README.md#appKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetBatch
+
+> SyntheticsBatchDetails GetBatch(ctx, batchId)
+
+Get a batch's updated details.
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "encoding/json"
+    "fmt"
+    "os"
+    datadog "github.com/DataDog/datadog-api-client-go/api/v1/datadog"
+)
+
+func main() {
+    ctx := datadog.NewDefaultContext(context.Background())
+
+    batchId := "batchId_example" // string | The ID of the batch.
+
+    configuration := datadog.NewConfiguration()
+
+    apiClient := datadog.NewAPIClient(configuration)
+    resp, r, err := apiClient.SyntheticsApi.GetBatch(ctx, batchId)
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `SyntheticsApi.GetBatch`: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetBatch`: SyntheticsBatchDetails
+    responseContent, _ := json.MarshalIndent(resp, "", "  ")
+    fmt.Fprintf(os.Stdout, "Response from SyntheticsApi.GetBatch:\n%s\n", responseContent)
+}
+```
+
+### Required Parameters
+
+
+Name | Type | Description  | Notes
+---- | ---- | ------------ | ------
+**ctx** | **context.Context** | Context for authentication, logging, cancellation, deadlines, tracing, etc. |
+**batchId** | **string** | The ID of the batch. | 
+
+
+### Optional Parameters
+
+This endpoint does not have optional parameters.
+
+
+### Return type
+
+[**SyntheticsBatchDetails**](SyntheticsBatchDetails.md)
 
 ### Authorization
 

@@ -922,6 +922,12 @@
       "type": "safe"
     }
   },
+  "GetBatch": {
+    "tag": "Synthetics",
+    "undo": {
+      "type": "safe"
+    }
+  },
   "ListLocations": {
     "tag": "Synthetics",
     "undo": {

@@ -12,8 +12,8 @@ import (
 	"encoding/json"
 )
 
-// SyntheticsCITestMetadataCi Describe CI provider.
-type SyntheticsCITestMetadataCi struct {
+// SyntheticsCIBatchMetadataCi Description of the CI provider.
+type SyntheticsCIBatchMetadataCi struct {
 	// Name of the pipeline.
 	Pipeline *string `json:"pipeline,omitempty"`
 	// Name of the CI provider.
@@ -22,25 +22,25 @@ type SyntheticsCITestMetadataCi struct {
 	UnparsedObject map[string]interface{} `json:-`
 }
 
-// NewSyntheticsCITestMetadataCi instantiates a new SyntheticsCITestMetadataCi object
+// NewSyntheticsCIBatchMetadataCi instantiates a new SyntheticsCIBatchMetadataCi object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSyntheticsCITestMetadataCi() *SyntheticsCITestMetadataCi {
-	this := SyntheticsCITestMetadataCi{}
+func NewSyntheticsCIBatchMetadataCi() *SyntheticsCIBatchMetadataCi {
+	this := SyntheticsCIBatchMetadataCi{}
 	return &this
 }
 
-// NewSyntheticsCITestMetadataCiWithDefaults instantiates a new SyntheticsCITestMetadataCi object
+// NewSyntheticsCIBatchMetadataCiWithDefaults instantiates a new SyntheticsCIBatchMetadataCi object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewSyntheticsCITestMetadataCiWithDefaults() *SyntheticsCITestMetadataCi {
-	this := SyntheticsCITestMetadataCi{}
+func NewSyntheticsCIBatchMetadataCiWithDefaults() *SyntheticsCIBatchMetadataCi {
+	this := SyntheticsCIBatchMetadataCi{}
 	return &this
 }
 
 // GetPipeline returns the Pipeline field value if set, zero value otherwise.
-func (o *SyntheticsCITestMetadataCi) GetPipeline() string {
+func (o *SyntheticsCIBatchMetadataCi) GetPipeline() string {
 	if o == nil || o.Pipeline == nil {
 		var ret string
 		return ret
@@ -50,7 +50,7 @@ func (o *SyntheticsCITestMetadataCi) GetPipeline() string {
 
 // GetPipelineOk returns a tuple with the Pipeline field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SyntheticsCITestMetadataCi) GetPipelineOk() (*string, bool) {
+func (o *SyntheticsCIBatchMetadataCi) GetPipelineOk() (*string, bool) {
 	if o == nil || o.Pipeline == nil {
 		return nil, false
 	}
@@ -58,7 +58,7 @@ func (o *SyntheticsCITestMetadataCi) GetPipelineOk() (*string, bool) {
 }
 
 // HasPipeline returns a boolean if a field has been set.
-func (o *SyntheticsCITestMetadataCi) HasPipeline() bool {
+func (o *SyntheticsCIBatchMetadataCi) HasPipeline() bool {
 	if o != nil && o.Pipeline != nil {
 		return true
 	}
@@ -67,12 +67,12 @@ func (o *SyntheticsCITestMetadataCi) HasPipeline() bool {
 }
 
 // SetPipeline gets a reference to the given string and assigns it to the Pipeline field.
-func (o *SyntheticsCITestMetadataCi) SetPipeline(v string) {
+func (o *SyntheticsCIBatchMetadataCi) SetPipeline(v string) {
 	o.Pipeline = &v
 }
 
 // GetProvider returns the Provider field value if set, zero value otherwise.
-func (o *SyntheticsCITestMetadataCi) GetProvider() string {
+func (o *SyntheticsCIBatchMetadataCi) GetProvider() string {
 	if o == nil || o.Provider == nil {
 		var ret string
 		return ret
@@ -82,7 +82,7 @@ func (o *SyntheticsCITestMetadataCi) GetProvider() string {
 
 // GetProviderOk returns a tuple with the Provider field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SyntheticsCITestMetadataCi) GetProviderOk() (*string, bool) {
+func (o *SyntheticsCIBatchMetadataCi) GetProviderOk() (*string, bool) {
 	if o == nil || o.Provider == nil {
 		return nil, false
 	}
@@ -90,7 +90,7 @@ func (o *SyntheticsCITestMetadataCi) GetProviderOk() (*string, bool) {
 }
 
 // HasProvider returns a boolean if a field has been set.
-func (o *SyntheticsCITestMetadataCi) HasProvider() bool {
+func (o *SyntheticsCIBatchMetadataCi) HasProvider() bool {
 	if o != nil && o.Provider != nil {
 		return true
 	}
@@ -99,11 +99,11 @@ func (o *SyntheticsCITestMetadataCi) HasProvider() bool {
 }
 
 // SetProvider gets a reference to the given string and assigns it to the Provider field.
-func (o *SyntheticsCITestMetadataCi) SetProvider(v string) {
+func (o *SyntheticsCIBatchMetadataCi) SetProvider(v string) {
 	o.Provider = &v
 }
 
-func (o SyntheticsCITestMetadataCi) MarshalJSON() ([]byte, error) {
+func (o SyntheticsCIBatchMetadataCi) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
 	if o.UnparsedObject != nil {
 		return json.Marshal(o.UnparsedObject)
@@ -117,7 +117,7 @@ func (o SyntheticsCITestMetadataCi) MarshalJSON() ([]byte, error) {
 	return json.Marshal(toSerialize)
 }
 
-func (o *SyntheticsCITestMetadataCi) UnmarshalJSON(bytes []byte) (err error) {
+func (o *SyntheticsCIBatchMetadataCi) UnmarshalJSON(bytes []byte) (err error) {
 	raw := map[string]interface{}{}
 	all := struct {
 		Pipeline *string `json:"pipeline,omitempty"`
@@ -137,38 +137,38 @@ func (o *SyntheticsCITestMetadataCi) UnmarshalJSON(bytes []byte) (err error) {
 	return nil
 }
 
-type NullableSyntheticsCITestMetadataCi struct {
-	value *SyntheticsCITestMetadataCi
+type NullableSyntheticsCIBatchMetadataCi struct {
+	value *SyntheticsCIBatchMetadataCi
 	isSet bool
 }
 
-func (v NullableSyntheticsCITestMetadataCi) Get() *SyntheticsCITestMetadataCi {
+func (v NullableSyntheticsCIBatchMetadataCi) Get() *SyntheticsCIBatchMetadataCi {
 	return v.value
 }
 
-func (v *NullableSyntheticsCITestMetadataCi) Set(val *SyntheticsCITestMetadataCi) {
+func (v *NullableSyntheticsCIBatchMetadataCi) Set(val *SyntheticsCIBatchMetadataCi) {
 	v.value = val
 	v.isSet = true
 }
 
-func (v NullableSyntheticsCITestMetadataCi) IsSet() bool {
+func (v NullableSyntheticsCIBatchMetadataCi) IsSet() bool {
 	return v.isSet
 }
 
-func (v *NullableSyntheticsCITestMetadataCi) Unset() {
+func (v *NullableSyntheticsCIBatchMetadataCi) Unset() {
 	v.value = nil
 	v.isSet = false
 }
 
-func NewNullableSyntheticsCITestMetadataCi(val *SyntheticsCITestMetadataCi) *NullableSyntheticsCITestMetadataCi {
-	return &NullableSyntheticsCITestMetadataCi{value: val, isSet: true}
+func NewNullableSyntheticsCIBatchMetadataCi(val *SyntheticsCIBatchMetadataCi) *NullableSyntheticsCIBatchMetadataCi {
+	return &NullableSyntheticsCIBatchMetadataCi{value: val, isSet: true}
 }
 
-func (v NullableSyntheticsCITestMetadataCi) MarshalJSON() ([]byte, error) {
+func (v NullableSyntheticsCIBatchMetadataCi) MarshalJSON() ([]byte, error) {
 	return json.Marshal(v.value)
 }
 
-func (v *NullableSyntheticsCITestMetadataCi) UnmarshalJSON(src []byte) error {
+func (v *NullableSyntheticsCIBatchMetadataCi) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
