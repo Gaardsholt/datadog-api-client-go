@@ -12,7 +12,7 @@ import (
 	"encoding/json"
 )
 
-// SLOCorrectionCreateData The data object associated with the SLO correction to be created
+// SLOCorrectionCreateData The data object associated with the SLO correction to be created.
 type SLOCorrectionCreateData struct {
 	Attributes *SLOCorrectionCreateRequestAttributes `json:"attributes,omitempty"`
 	Type       *SLOCorrectionType                    `json:"type,omitempty"`
